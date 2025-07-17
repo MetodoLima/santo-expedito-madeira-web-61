@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Hammer, TreePine, Phone, Store, Layers, Truck, Star, Users, Award, Timer } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 export function Component() {
   const features = [{
     icon: TreePine,
@@ -179,16 +180,38 @@ export function Component() {
               delay: 0.6,
               ease: "easeOut"
             }}>
-                {/* Store Image */}
+                {/* Store Images Carousel */}
                 <div className="relative">
-                  <motion.img 
-                    alt="Fachada da Madeireira Santo Expedito" 
-                    className="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover rounded-2xl sm:rounded-3xl shadow-2xl" 
-                    src="/lovable-uploads/cbd9433b-84fd-42a8-9f5c-b49ed94c8e1e.jpg"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
-                  />
+                  <Carousel className="w-full rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden">
+                    <CarouselContent>
+                      <CarouselItem>
+                        <motion.img 
+                          alt="Fachada da Madeireira Santo Expedito" 
+                          className="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover" 
+                          src="/lovable-uploads/cbd9433b-84fd-42a8-9f5c-b49ed94c8e1e.jpg"
+                          initial={{ opacity: 0, scale: 0.9 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+                        />
+                      </CarouselItem>
+                      <CarouselItem>
+                        <img 
+                          alt="Produtos da Madeireira Santo Expedito" 
+                          className="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover" 
+                          src="/lovable-uploads/0ef89d54-bf67-4b46-b670-771328335128.png"
+                        />
+                      </CarouselItem>
+                      <CarouselItem>
+                        <img 
+                          alt="Madeiras de qualidade" 
+                          className="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover" 
+                          src="/lovable-uploads/1342f4ea-9370-4ee1-aa65-8f27f022d86b.png"
+                        />
+                      </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious className="left-2" />
+                    <CarouselNext className="right-2" />
+                  </Carousel>
                   
                   {/* Trust indicator overlay */}
                   <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-gradient-to-r from-green-700 to-emerald-800 text-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-2xl">
