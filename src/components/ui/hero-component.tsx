@@ -180,10 +180,10 @@ export function Component() {
               ease: "easeOut"
             }}>
                 {/* Store Image */}
-                <div className="bg-white/90 backdrop-blur-xl rounded-3xl sm:rounded-[2rem] p-6 sm:p-8 lg:p-10 shadow-2xl border border-slate-200/50">
+                <div className="relative">
                   <motion.img 
                     alt="Fachada da Madeireira Santo Expedito" 
-                    className="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover rounded-2xl sm:rounded-3xl shadow-xl" 
+                    className="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover rounded-2xl sm:rounded-3xl shadow-2xl" 
                     src="/lovable-uploads/cbd9433b-84fd-42a8-9f5c-b49ed94c8e1e.jpg"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
