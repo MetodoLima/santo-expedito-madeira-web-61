@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Hammer, TreePine, Phone, Store, Layers, Truck, Star, Users, Award, Timer } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 export function Component() {
   const features = [{
     icon: TreePine,
@@ -182,7 +183,18 @@ export function Component() {
             }}>
                 {/* Store Images Carousel */}
                 <div className="relative">
-                  <Carousel className="w-full rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden">
+                  <Carousel 
+                    className="w-full rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden"
+                    opts={{
+                      loop: true,
+                      duration: 30,
+                    }}
+                    plugins={[
+                      Autoplay({
+                        delay: 5000,
+                      }),
+                    ]}
+                  >
                     <CarouselContent>
                       <CarouselItem>
                         <motion.img 
