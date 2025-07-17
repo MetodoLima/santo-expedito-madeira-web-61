@@ -243,7 +243,7 @@ export function Component() {
                 {/* Store Images Carousel */}
                 <div className="relative">
                   <Carousel 
-                    className="w-full rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden"
+                    className="w-full rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden [&>div>button]:hidden"
                     opts={{
                       loop: true,
                       duration: 30,
